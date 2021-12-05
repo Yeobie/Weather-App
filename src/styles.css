@@ -1,0 +1,53 @@
+.temperature {
+  font-size: 100px;
+  color: #1b3290;
+  padding-right: 0px;
+  max-width: 140px;
+}
+
+.weatherdata {
+  margin: 0px;
+}
+
+form {
+  text-align: center;
+}
+
+.celsiusfahrenheit {
+  padding: 30px 0px;
+  font-size: 30px;
+}
+.clouds {
+  font-size: 120px;
+  padding-left: 0px;
+}
+
+.weather {
+  text-align: center;
+  font-size: 40px;
+}
+
+.container {
+  max-width: 800px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  background-color: #eaeefc;
+  border-style: solid;
+  padding: 50px;
+  border-radius: 10px;
+  border-width: 2px;
+}
+
+.days {
+  background-color: #c6d1f4;
+  border-radius: 20px;
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+.forecast {
+  font-size: 50px;
+}
