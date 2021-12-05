@@ -54,6 +54,8 @@ function searchCity(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchCity);
+let search = document.querySelector("#search-button")
+search.addEventListener("click", searchCity)
 
 function getCurrent(response) {
   let city = response.data.name;
