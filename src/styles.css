@@ -1,3 +1,9 @@
+.btn-primary, .btn-success{
+  height: 40px;
+}
+
+
+
 .temperature {
   font-size: 100px;
   color: #1b3290;
