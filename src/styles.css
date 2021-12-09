@@ -2,7 +2,9 @@
   height: 40px;
 }
 
-
+h1 {
+  text-transform: capitalize;
+}
 
 .temperature {
   font-size: 100px;
