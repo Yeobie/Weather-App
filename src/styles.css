@@ -13,6 +13,7 @@
 
 .weatherdata {
   margin: 0px;
+  text-transform: capitalize;
 }
 
 form {
