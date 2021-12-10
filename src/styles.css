@@ -16,8 +16,13 @@ form {
   height: 40px;
 }
 
-h1 {
+h1, .conditions, .weatherdata {
   text-transform: capitalize;
+  text-align: center;
+}
+
+.weatherdata {
+  margin: 0px
 }
 
 .temperature {
@@ -26,11 +31,6 @@ h1 {
   padding-right: 0px;
   max-width: 140px;
   text-align: right;
-}
-
-.weatherdata {
-  margin: 0px;
-  text-transform: capitalize;
 }
 
 
@@ -43,13 +43,13 @@ h1 {
   width: 150px;
 }
 
+h4 {
+color: #013c4d
+}
+
 .weather {
   text-align: center;
   font-size: 40px;
-}
-
-h4 {
-color: #013c4d
 }
 
 .days {
