@@ -38,6 +38,8 @@ function getWeather(response) {
   let humidity = response.data.main.humidity;
   let humidityvalue = document.querySelector("#humidity");
   humidityvalue.innerHTML = `Humidity: ${humidity}%`;
+  let weatherIcon = document.querySelector("#icon")
+  weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
 }
 
 function searchCity(event) {
