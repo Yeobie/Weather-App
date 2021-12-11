@@ -6,7 +6,7 @@
   border-style: solid;
   padding: 50px;
   border-radius: 10px;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 form {
@@ -45,7 +45,8 @@ h1, .conditions, .weatherdata {
 }
 
 h4 {
-color: #013c4d
+color: #013c4d;
+margin: 0px;
 }
 
 .weather {
