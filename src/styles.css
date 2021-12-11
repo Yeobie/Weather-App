@@ -41,7 +41,8 @@ h1, .conditions, .weatherdata {
 }
 
 .active{
-cursor: default
+cursor: default;
+color:black
 }
 
 .active:hover{
