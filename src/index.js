@@ -26,7 +26,8 @@ if (minutes < 10) {
 date.innerHTML = `${day} ${hours}:${minutes}`;
 
 function getWeather(response) {
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  let temperature = Math.round(celsiusTemperature);
   let degrees = document.querySelector("#degrees-value");
   degrees.innerHTML = `${temperature}`;
   let description = response.data.weather[0].description;
@@ -76,9 +77,9 @@ function getCurrent(response) {
   let humidityvalue = document.querySelector("#humidity");
   humidityvalue.innerHTML = `Humidity: ${humidity}%`;
     let weatherIcon = document.querySelector("#icon")
-
     weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-weatherIcon.setAttribute("alt", response.data.weather[0].description )}
+weatherIcon.setAttribute("alt", response.data.weather[0].description )
+}
 
 
 function showCurrent(position) {
@@ -95,3 +96,15 @@ function showCurrentCity() {
 
 let current = document.querySelector("#current-city");
 current.addEventListener("click", showCurrentCity);
+
+function convertFahrenheit(event){
+  event.preventDefault()
+  let temperature = document.querySelector("#degrees-value")
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature)
+
+}
+
+let celsiusTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-degrees");
+fahrenheitLink.addEventListener("click", convertFahrenheit)
