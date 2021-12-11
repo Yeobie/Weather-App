@@ -105,7 +105,15 @@ function convertFahrenheit(event){
   temperature.innerHTML = Math.round(fahrenheitTemperature)
 
 }
-
+ function convertCelsius(event) {
+   event.preventDefault()
+     let temperature = document.querySelector("#degrees-value")
+temperature.innerHTML = Math.round(celsiusTemperature)
+ }
+ 
 let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-degrees");
 fahrenheitLink.addEventListener("click", convertFahrenheit)
+
+let celsiusLink = document.querySelector("#celsius-degrees");
+celsiusLink.addEventListener("click", convertCelsius)
