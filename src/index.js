@@ -64,7 +64,8 @@ function getCurrent(response) {
   let city = response.data.name;
   let h1 = document.querySelector("#city-name");
   h1.innerHTML = `${city}`;
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  let temperature = Math.round(celsiusTemperature);
   let degrees = document.querySelector("#degrees-value");
   degrees.innerHTML = `${temperature}`;
   let description = response.data.weather[0].description;
