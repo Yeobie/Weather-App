@@ -100,6 +100,8 @@ current.addEventListener("click", showCurrentCity);
 
 function convertFahrenheit(event){
   event.preventDefault()
+  celsiusLink.classList.remove("active")
+  fahrenheitLink.classList.add("active")
   let temperature = document.querySelector("#degrees-value")
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemperature)
@@ -107,10 +109,12 @@ function convertFahrenheit(event){
 }
  function convertCelsius(event) {
    event.preventDefault()
+   fahrenheitLink.classList.remove("active")
+   celsiusLink.classList.add("active")
      let temperature = document.querySelector("#degrees-value")
 temperature.innerHTML = Math.round(celsiusTemperature)
  }
- 
+
 let celsiusTemperature = null;
 let fahrenheitLink = document.querySelector("#fahrenheit-degrees");
 fahrenheitLink.addEventListener("click", convertFahrenheit)

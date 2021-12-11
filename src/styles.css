@@ -40,6 +40,14 @@ h1, .conditions, .weatherdata {
   font-size: 30px;
 }
 
+.active{
+cursor: default
+}
+
+.active:hover{
+  text-decoration: none;
+}
+
 #icon {
   width: 150px;
 }
