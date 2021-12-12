@@ -33,7 +33,8 @@ function getWeather(response) {
   let description = response.data.weather[0].description;
   let weather = document.querySelector("#weather-description");
   weather.innerHTML = `${description}`;
-  let wind = Math.round(response.data.wind.speed);
+  windMetric = response.data.wind.speed
+  let wind = Math.round(windMetric);
   let windspeed = document.querySelector("#wind");
   windspeed.innerHTML = `Wind: ${wind} km/h`;
   let humidity = response.data.main.humidity;
@@ -71,7 +72,8 @@ function getCurrent(response) {
   let description = response.data.weather[0].description;
   let weather = document.querySelector("#weather-description");
   weather.innerHTML = `${description}`;
-  let wind = Math.round(response.data.wind.speed);
+   windMetric = response.data.wind.speed
+  let wind = Math.round(windMetric);
   let windspeed = document.querySelector("#wind");
   windspeed.innerHTML = `Wind: ${wind} km/h`;
   let humidity = response.data.main.humidity;
@@ -104,18 +106,25 @@ function convertFahrenheit(event){
   fahrenheitLink.classList.add("active")
   let temperature = document.querySelector("#degrees-value")
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(fahrenheitTemperature)
-
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+  let windspeed = document.querySelector("#wind");
+ let windImperial = Math.round(windMetric * 0.621371);
+ windspeed.innerHTML = `Wind: ${windImperial} mph`
 }
+
  function convertCelsius(event) {
    event.preventDefault()
    fahrenheitLink.classList.remove("active")
    celsiusLink.classList.add("active")
      let temperature = document.querySelector("#degrees-value")
 temperature.innerHTML = Math.round(celsiusTemperature)
+  let windspeed = document.querySelector("#wind");
+  let windKM = Math.round(windMetric)
+windspeed.innerHTML = `Wind: ${windKM} km/h`
  }
 
 let celsiusTemperature = null;
+let windMetric = null
 let fahrenheitLink = document.querySelector("#fahrenheit-degrees");
 fahrenheitLink.addEventListener("click", convertFahrenheit)
 
