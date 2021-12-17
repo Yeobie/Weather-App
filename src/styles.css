@@ -2,7 +2,7 @@
   max-width: 800px;
   max-height: 700px;
   display: block;
-  background-color: #fdfbf2;
+  background-color: #f3e5b1;
   padding: 50px;
   margin-top: 70px;
   margin-bottom: 70px;
@@ -37,7 +37,7 @@ h1 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  background-color: #f3e5b1;
+  background-color: #fbf7e6;
   border-radius: 30px;
   width: 500px;
 }
@@ -89,13 +89,13 @@ h4 {
   display: block;
   margin: 0 auto;
   text-align: center;
-  background-color: #f3e5b1;
+  background-color: #fbf7e6;
   width: 150px;
   border-radius: 30px;
 }
 
 .col-2 {
-  background-color: #f3e5b1;
+  background-color: #87bdca;
   border-radius: 20px;
   max-width: 150px;
   font-size: 18px;
@@ -107,7 +107,7 @@ h4 {
 }
 
 .forecast-temp-min {
-  color: #63a095;
+  color: #3a6874;
 }
 
 .credits {
