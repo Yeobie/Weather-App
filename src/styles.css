@@ -2,31 +2,60 @@
   max-width: 800px;
   max-height: 700px;
   display: block;
-  background-color: #9dd5cb;
-  border-style: solid;
+  background-color: #fdfbf2;
   padding: 50px;
-  border-radius: 10px;
-  border-width: 1px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  border-radius: 40px;
+  box-shadow: 10px 10px 150px #f3e5b1;
 }
 
 form {
-  text-align: center;}
-
-.btn-primary, .btn-success{
-  height: 40px;
-  
+  text-align: center;
 }
 
-h1, .conditions, .weatherdata {
+.form-control {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #4c8492;
+}
+
+.btn-success {
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #f09c67;
+}
+
+h1 {
+  color: #013c4d;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f3e5b1;
+  border-radius: 30px;
+  width: 500px;
+}
+
+h1,
+.conditions,
+.weatherdata {
   display: block;
   text-align: center;
 }
-h1, .conditions, .weatherdata::first-letter {
+h1,
+.conditions,
+.weatherdata::first-letter {
   text-transform: capitalize;
 }
 
 .weatherdata {
-  margin: 0px
+  margin: 0px;
 }
 
 .temperature {
@@ -37,18 +66,17 @@ h1, .conditions, .weatherdata::first-letter {
   text-align: right;
 }
 
-
 .celsiusfahrenheit {
   padding: 30px 0px;
   font-size: 30px;
 }
 
-.active{
-cursor: default;
-color:black
+.active {
+  cursor: default;
+  color: black;
 }
 
-.active:hover{
+.active:hover {
   text-decoration: none;
 }
 
@@ -57,27 +85,31 @@ color:black
 }
 
 h4 {
-color: #013c4d;
-margin: 0px;
-}
-
-.weather {
+  color: #013c4d;
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  font-size: 40px;
+  background-color: #f3e5b1;
+  width: 150px;
+  border-radius: 30px;
 }
 
-.days {
+.col-2 {
   background-color: #f3e5b1;
   border-radius: 20px;
   max-width: 150px;
-  display: block;
-  margin: 0 auto;
   font-size: 18px;
   text-align: center;
 }
 
-.forecast {
-  font-size: 50px;
+.forecast-temperatures {
+  font-size: 16px;
 }
 
+.forecast-temp-min {
+  color: #63a095;
+}
 
+.credits {
+  padding-top: 10px;
+}
