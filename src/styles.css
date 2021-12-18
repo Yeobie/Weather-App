@@ -10,6 +10,11 @@
   box-shadow: 10px 10px 150px #f3e5b1;
 }
 
+h3 {
+  color: #3a6c77;
+  padding-left: 20px;
+}
+
 form {
   text-align: center;
 }
@@ -39,7 +44,9 @@ h1 {
   text-align: center;
   background-color: #fbf7e6;
   border-radius: 30px;
-  width: 500px;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 h1,
@@ -52,6 +59,16 @@ h1,
 .conditions,
 .weatherdata::first-letter {
   text-transform: capitalize;
+}
+
+.description {
+  background-color: rgba(241, 156, 103, 0.3);
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .weatherdata {
