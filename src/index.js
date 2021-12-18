@@ -25,27 +25,50 @@ if (minutes < 10) {
 
 date.innerHTML = `${day} ${hours}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
   let days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      let max = Math.round(forecastDay.temp.max);
+      let min = Math.round(forecastDay.temp.min);
+      forecastHTML =
+        forecastHTML +
+        `
         <div class="col-2">
           <div class="forecast-day-week">
-            ${day}
+            ${formatDay(forecastDay.dt)}
           </div>
-          <img src="http://openweathermap.org/img/wn/02d@2x.png"
+          <img src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
           />
           <div class="forecast-temperatures">
-            <span class="forecast-temp-max">14º</span>
-            <span class="forecast-temp-min">8º</span>
+            <span class="forecast-temp-max">${max}º</span>
+            <span class="forecast-temp-min">${min}º</span>
           </div>
         </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + ` </div>`;
@@ -124,6 +147,8 @@ function getCurrent(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function showCurrent(position) {
