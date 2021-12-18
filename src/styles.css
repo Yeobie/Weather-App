@@ -60,7 +60,7 @@ h1,
 
 .temperature {
   font-size: 100px;
-  color: #1b3290;
+  color: #4c8492;
   padding-right: 0px;
   max-width: 140px;
   text-align: right;
@@ -85,21 +85,26 @@ h1,
 }
 
 h4 {
-  color: #013c4d;
+  color: #3a6c77;
   display: block;
   margin: 0 auto;
   text-align: center;
-  background-color: #fbf7e6;
+  background-color: #f09c67;
   width: 150px;
   border-radius: 30px;
 }
 
+#forecast {
+  margin-left: 20px;
+}
+
 .col-2 {
-  background-color: #87bdca;
+  background-color: rgba(76, 132, 146, 0.5);
   border-radius: 20px;
   max-width: 150px;
   font-size: 18px;
   text-align: center;
+  margin-right: 10px;
 }
 
 .forecast-temperatures {
