@@ -54,7 +54,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-        <div class="col-2">
+        <div class="col-2 forecast-squares">
           <div class="forecast-day-week">
             ${formatDay(forecastDay.dt)}
           </div>
