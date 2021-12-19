@@ -98,7 +98,7 @@ h1,
 
 .active {
   cursor: default;
-  color: black;
+  color: #4c8492;
 }
 
 .active:hover {
