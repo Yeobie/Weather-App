@@ -111,7 +111,8 @@ function getWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
-
+  let forecastHeader = document.querySelector("h4");
+  forecastHeader.innerHTML = `<strong>Forecast</strong>`;
   getForecast(response.data.coord);
 }
 
