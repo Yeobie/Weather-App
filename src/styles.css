@@ -1,13 +1,13 @@
 .container {
   max-width: 800px;
-  max-height: 700px;
+  max-height: 620px;
   display: block;
   background-color: #f3e5b1;
-  padding: 50px;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  padding: 30px 30px 0px 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 40px;
-  box-shadow: 10px 10px 150px #f3e5b1;
+  box-shadow: 10px 10px 50px #f3e5b1;
 }
 
 h3 {
@@ -119,17 +119,14 @@ h4 {
   border-radius: 30px;
 }
 
-#forecast {
-  margin-left: 20px;
-}
-
 .col-2 {
   background-color: rgba(76, 132, 146, 0.5);
   border-radius: 20px;
   max-width: 150px;
   font-size: 18px;
   text-align: center;
-  margin-right: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
 .forecast-temperatures {
@@ -141,5 +138,5 @@ h4 {
 }
 
 .credits {
-  padding-top: 10px;
+  text-align: center;
 }

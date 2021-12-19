@@ -61,7 +61,7 @@ function displayForecast(response) {
           </div>
           <img src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
-          }@2x.png"
+          }@2x.png" height="70"
           />
           <div class="forecast-temperatures">
             <span class="forecast-temp-max">${max}º</span>
@@ -92,6 +92,10 @@ function getWeather(response) {
   let temperature = Math.round(celsiusTemperature);
   let degrees = document.querySelector("#degrees-value");
   degrees.innerHTML = `${temperature}`;
+  let celsius = document.querySelector("#celsius-degrees");
+  celsius.innerHTML = "ºC";
+  let fahrenheit = document.querySelector("#fahrenheit-degrees");
+  fahrenheit.innerHTML = "ºF";
   let description = response.data.weather[0].description;
   let weather = document.querySelector("#weather-description");
   weather.innerHTML = `${description}`;
