@@ -30,11 +30,19 @@ form {
   background-color: #4c8492;
 }
 
+.btn-primary:hover {
+  background-color: #215d6b;
+}
+
 .btn-success {
   height: 40px;
   border-radius: 10px;
   border-style: none;
   background-color: #f09c67;
+}
+
+.btn-success:hover {
+  background-color: #c66a31;
 }
 
 h1 {
@@ -86,7 +94,15 @@ h1,
 .celsiusfahrenheit {
   padding: 30px 0px;
   font-size: 30px;
-  color: #4c8492;
+}
+
+.active {
+  cursor: default;
+  color: black;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 #icon {
