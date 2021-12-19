@@ -166,6 +166,9 @@ function showCurrentCity() {
 let current = document.querySelector("#current-city");
 current.addEventListener("click", showCurrentCity);
 
+//the following functions were originally needed for the Cº/Fº conversion.
+//leaving them here to always have a reference of the code I wrote
+
 function convertFahrenheit(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");

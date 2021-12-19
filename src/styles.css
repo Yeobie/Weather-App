@@ -86,15 +86,7 @@ h1,
 .celsiusfahrenheit {
   padding: 30px 0px;
   font-size: 30px;
-}
-
-.active {
-  cursor: default;
-  color: black;
-}
-
-.active:hover {
-  text-decoration: none;
+  color: #4c8492;
 }
 
 #icon {
