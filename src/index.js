@@ -47,9 +47,8 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday"];
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index > 0 && index < 6) {
       let max = Math.round(forecastDay.temp.max);
       let min = Math.round(forecastDay.temp.min);
       forecastHTML =
