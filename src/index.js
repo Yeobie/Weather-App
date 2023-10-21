@@ -46,7 +46,11 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row">`; //goes outside the function that loops (which starts at line 54)
+  //because otherwise the loop would involve also the row, and there would be 5 rows one under the other.
+  //With this method, you get only one row and what is looped is what's INSIDE the row.
+  //so the columns, which have a class of col-2 so when they get looped they end up one next to the other for 5 times.
+
   forecast.forEach(function (forecastDay, index) {
     if (index > 0 && index < 6) {
       let max = Math.round(forecastDay.temp.max);
@@ -213,11 +217,6 @@ function convertCelsius(event) {
   event.preventDefault();
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
-  let temperature = document.querySelector("#degrees-value");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-  let windspeed = document.querySelector("#wind");
-  let windKM = Math.round(windMetric);
-  windspeed.innerHTML = `Wind: ${windKM} km/h`;
 }
 
 let celsiusTemperature = null;

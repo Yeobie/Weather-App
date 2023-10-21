@@ -1,6 +1,6 @@
 .container {
   max-width: 800px;
-  max-height: 620px;
+  max-height: 600px;
   display: block;
   background-color: #f9e0c7;
   padding: 30px;
@@ -30,16 +30,16 @@ h3 {
   background-color: #215d6b;
 }
 
-.btn-success {
+/* .btn-success {
   height: 40px;
   border-radius: 10px;
   border-style: none;
   background-color: #f09c67;
-}
+} 
 
 .btn-success:hover {
   background-color: #c66a31;
-}
+} */
 
 h1 {
   color: #013c4d;
@@ -47,18 +47,20 @@ h1 {
   background-color: #fbf7e6;
   border-radius: 30px;
   width: fit-content;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+  padding: 0px 20px;
 }
 
 h1,
-.conditions,
+.date,
 .weatherdata {
   display: block;
   text-align: center;
 }
+
 h1,
-.conditions,
+.date,
 .weatherdata::first-letter {
   text-transform: capitalize;
 }
@@ -69,8 +71,9 @@ h1,
   display: block;
   margin: 0 auto;
   width: fit-content;
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  padding: 0px 10px;
 }
 
 .weatherdata {
@@ -81,7 +84,7 @@ h1,
   font-size: 100px;
   color: #4c8492;
   padding-right: 0px;
-  max-width: 140px;
+  max-width: 150px;
   text-align: right;
 }
 
